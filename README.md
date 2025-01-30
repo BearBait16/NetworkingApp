@@ -1,4 +1,4 @@
-# LOCAL FREEZE TAG
+# LOCAL Infection TAG
 
 Our current goals for this week: Research tools, languages, and local connection methods to make a game that can be played LOCALLY
 
@@ -12,3 +12,4 @@ Research how Godot interacts with Web Sockets
 Have a full running game
 
 Stretch Goals: 
+Host multiple players 
