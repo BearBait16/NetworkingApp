@@ -1,0 +1,56 @@
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+.DS_Store
+.idea/
+.vscode/
+dist/
+build/
+coverage/
+*.log
+logs/
+log/
+*.pid
+*.seed
+*.tgz
+
+# OS-specific files
+Thumbs.db
+Desktop.ini
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# TypeScript files
+*.tsbuildinfo
+
+# Webpack and Parcel cache
+.cache/
+
+# Logs and runtime files
+logs/*
+pids/*
+*.pid.lock
+
+# Debug files
+*.swp
+*.swo
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Jest
+jest.config.js
+coverage/
+
+# Next.js
+.next/
+out/
+
+# Miscellaneous
+*.local
+*.sublime-project
+*.sublime-workspace
