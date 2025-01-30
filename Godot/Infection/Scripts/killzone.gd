@@ -1,10 +1,14 @@
 extends Area2D
 
 @onready var timer = $Timer
-@onready var player: CharacterBody2D = $"../../Player"
+
 
 func _on_body_entered(body):
 	print("You died!")
+	if body.get_parent().name == ("Runners"):
+		print("Runner Died")
+	else:
+		body.respawn()
 	Engine.time_scale = 0.5
 	body.get_node("CollisionShape2D").queue_free()
 	timer.start()

@@ -265,11 +265,15 @@ zoom = Vector2(2, 2)
 
 [node name="Players" type="Node" parent="."]
 
-[node name="Player" parent="Players" instance=ExtResource("1_x6yxa")]
+[node name="Runners" type="Node" parent="Players"]
+
+[node name="Runner" parent="Players/Runners" instance=ExtResource("1_x6yxa")]
 position = Vector2(0, -8)
 collision_layer = 19
 
-[node name="Tagger" parent="Players" instance=ExtResource("8_tibvy")]
+[node name="Taggers" type="Node" parent="Players"]
+
+[node name="Tagger" parent="Players/Taggers" instance=ExtResource("8_tibvy")]
 position = Vector2(-232, 117)
 
 [node name="Coins" type="Node" parent="."]
