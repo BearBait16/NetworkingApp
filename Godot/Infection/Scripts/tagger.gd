@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
-
 const SPEED = 200.0
 const JUMP_VELOCITY = -350.0
-var saved_position : Vector2
+@onready var saved_position : Vector2 = position
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -23,9 +22,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
-func save_position():
-	saved_position = position
 
 func respawn():
 	position = saved_position
