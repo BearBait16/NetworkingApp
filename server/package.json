@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "ws": "^8.18.1"
+  },
+  
+  "type": "module"
+  
+}
