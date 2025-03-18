@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ndiqlv6466le"]
+[gd_scene load_steps=19 format=3 uid="uid://ndiqlv6466le"]
 
 [ext_resource type="PackedScene" uid="uid://brv3bv8vqi56s" path="res://Scenes/player.tscn" id="1_x6yxa"]
 [ext_resource type="Texture2D" uid="uid://c7wy6og1a6ww4" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_af0bf"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cqr1tnwi32q1f" path="res://Scenes/killzone.tscn" id="7_jfa6v"]
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="8_l886s"]
 [ext_resource type="PackedScene" uid="uid://btqsnh62aakx7" path="res://Scenes/tagger.tscn" id="8_tibvy"]
+[ext_resource type="PackedScene" uid="uid://dfynmdi2ivnjg" path="res://Scenes/side_wall.tscn" id="11_w12tu"]
 
 [sub_resource type="GDScript" id="GDScript_b7558"]
 script/source = "extends Node2D
@@ -221,6 +222,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_neuo7")
 text = "Coins x 0"
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
 [node name="Platforms" type="Node" parent="."]
 
 [node name="TileMap" type="TileMap" parent="Platforms"]
@@ -260,17 +264,21 @@ position = Vector2(-104, 5)
 position = Vector2(0, 16)
 shape = SubResource("WorldBoundaryShape2D_vyj7g")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-
 [node name="Players" type="Node" parent="."]
 
-[node name="Player" parent="Players" instance=ExtResource("1_x6yxa")]
+[node name="Runners" type="Node" parent="Players"]
+
+[node name="Runner" parent="Players/Runners" instance=ExtResource("1_x6yxa")]
 position = Vector2(0, -8)
 collision_layer = 19
 
-[node name="Tagger" parent="Players" instance=ExtResource("8_tibvy")]
+[node name="Taggers" type="Node" parent="Players"]
+
+[node name="Tagger" parent="Players/Taggers" instance=ExtResource("8_tibvy")]
 position = Vector2(-232, 117)
+
+[node name="Enemy" parent="Players" instance=ExtResource("6_80rmo")]
+position = Vector2(88, 133)
 
 [node name="Coins" type="Node" parent="."]
 
@@ -322,5 +330,9 @@ position = Vector2(-248, 112)
 z_index = 1
 position = Vector2(264, 128)
 
-[node name="Enemy" parent="." instance=ExtResource("6_80rmo")]
-position = Vector2(88, 133)
+[node name="SideWall" parent="." instance=ExtResource("11_w12tu")]
+position = Vector2(-288, 112)
+
+[node name="SideWall2" parent="." instance=ExtResource("11_w12tu")]
+position = Vector2(288, 112)
+rotation = 3.14159
