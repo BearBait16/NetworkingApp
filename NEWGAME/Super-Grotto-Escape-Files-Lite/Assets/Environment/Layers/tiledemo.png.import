@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfv7p0xla0kuu"
-path="res://.godot/imported/tiledemo.png-f6a7bcb6a6ab5cac7feb240cf6a9925c.ctex"
+path="res://.godot/imported/tiledemo.png-9e78b9c3879f90b54304493d1678861a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Super Grotto Escape Files/Assets/Environment/Layers/tiledemo.png"
-dest_files=["res://.godot/imported/tiledemo.png-f6a7bcb6a6ab5cac7feb240cf6a9925c.ctex"]
+source_file="res://Super-Grotto-Escape-Files-Lite/Assets/Environment/Layers/tiledemo.png"
+dest_files=["res://.godot/imported/tiledemo.png-9e78b9c3879f90b54304493d1678861a.ctex"]
 
 [params]
 

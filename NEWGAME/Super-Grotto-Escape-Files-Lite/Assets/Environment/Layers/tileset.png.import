@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e1lrfoq4kj00"
-path="res://.godot/imported/tileset.png-109648286797fb1956db436d2e6d9d96.ctex"
+path="res://.godot/imported/tileset.png-6ff454bc65b39797dc5fe83b3233d270.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Super Grotto Escape Files/Assets/Environment/Layers/tileset.png"
-dest_files=["res://.godot/imported/tileset.png-109648286797fb1956db436d2e6d9d96.ctex"]
+source_file="res://Super-Grotto-Escape-Files-Lite/Assets/Environment/Layers/tileset.png"
+dest_files=["res://.godot/imported/tileset.png-6ff454bc65b39797dc5fe83b3233d270.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqtwk4hkgp5rh"
-path="res://.godot/imported/plant-big.png-6fdf88a3efc9a1a14cb41d5d071a1796.ctex"
+path="res://.godot/imported/plant-big.png-290585602d144fe86ca7218f2cd7ca22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Super Grotto Escape Files/Assets/Environment/Layers/props/plant-big.png"
-dest_files=["res://.godot/imported/plant-big.png-6fdf88a3efc9a1a14cb41d5d071a1796.ctex"]
+source_file="res://Super-Grotto-Escape-Files-Lite/Assets/Environment/Layers/props/plant-big.png"
+dest_files=["res://.godot/imported/plant-big.png-290585602d144fe86ca7218f2cd7ca22.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4hd4pnce5t7k"
-path="res://.godot/imported/player-shoot.png-05a9387f0ed240bbca94148704aead8e.ctex"
+path="res://.godot/imported/player-shoot.png-8fdcd70ff73d58ef87b980135c20c047.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-shoot.png"
-dest_files=["res://.godot/imported/player-shoot.png-05a9387f0ed240bbca94148704aead8e.ctex"]
+source_file="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-shoot.png"
+dest_files=["res://.godot/imported/player-shoot.png-8fdcd70ff73d58ef87b980135c20c047.ctex"]
 
 [params]
 

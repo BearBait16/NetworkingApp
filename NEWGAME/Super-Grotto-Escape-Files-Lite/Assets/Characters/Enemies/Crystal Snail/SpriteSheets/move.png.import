@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bssknno65wq42"
-path="res://.godot/imported/move.png-4dc0058aae7126cf096c71027502d990.ctex"
+path="res://.godot/imported/move.png-74c563510d4c928c229214b6be8795d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Super Grotto Escape Files/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/move.png"
-dest_files=["res://.godot/imported/move.png-4dc0058aae7126cf096c71027502d990.ctex"]
+source_file="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/move.png"
+dest_files=["res://.godot/imported/move.png-74c563510d4c928c229214b6be8795d1.ctex"]
 
 [params]
 

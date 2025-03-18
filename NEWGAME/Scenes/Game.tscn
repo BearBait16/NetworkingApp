@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_idpxl"]
 [ext_resource type="PackedScene" uid="uid://cinn1rugfeywx" path="res://Scenes/player.tscn" id="1_y1shl"]
-[ext_resource type="Texture2D" uid="uid://e1lrfoq4kj00" path="res://Assets/Super Grotto Escape Files/Assets/Environment/Layers/tileset.png" id="2_bhjw8"]
-[ext_resource type="Texture2D" uid="uid://dvqf83b17li86" path="res://Assets/Super Grotto Escape Files/Assets/Environment/Layers/tileset-2.png" id="3_e7eaq"]
-[ext_resource type="Texture2D" uid="uid://bcna7abhep6n7" path="res://Assets/Super Grotto Escape Files/Assets/Environment/Layers/back.png" id="3_n74qo"]
-[ext_resource type="Texture2D" uid="uid://c8b4neclftrqw" path="res://Assets/Super Grotto Escape Files/Assets/Environment/Layers/middle.png" id="4_fqkss"]
+[ext_resource type="Texture2D" uid="uid://e1lrfoq4kj00" path="res://Super-Grotto-Escape-Files-Lite/Assets/Environment/Layers/tileset.png" id="2_bhjw8"]
+[ext_resource type="Texture2D" uid="uid://dvqf83b17li86" path="res://Super-Grotto-Escape-Files-Lite/Assets/Environment/Layers/tileset-2.png" id="3_e7eaq"]
+[ext_resource type="Texture2D" uid="uid://bcna7abhep6n7" path="res://Super-Grotto-Escape-Files-Lite/Assets/Environment/Layers/back.png" id="3_n74qo"]
+[ext_resource type="Texture2D" uid="uid://c8b4neclftrqw" path="res://Super-Grotto-Escape-Files-Lite/Assets/Environment/Layers/middle.png" id="4_fqkss"]
 [ext_resource type="PackedScene" uid="uid://b4gbhkgfmhh2a" path="res://Scenes/powerUp.tscn" id="4_rijv6"]
-[ext_resource type="Texture2D" uid="uid://ct7scu03hgtvk" path="res://Assets/Super Grotto Escape Files/Assets/Environment/Layers/far.png" id="5_v812p"]
+[ext_resource type="Texture2D" uid="uid://ct7scu03hgtvk" path="res://Super-Grotto-Escape-Files-Lite/Assets/Environment/Layers/far.png" id="5_v812p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_63drv"]
 texture = ExtResource("2_bhjw8")

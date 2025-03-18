@@ -54,12 +54,6 @@ wss.on("connection", function connection(ws) {
         }
     });
 
-    ws.on("close", () => {
-        const player = players.get(ws);
-        players.delete(ws);
-        broadcastMessage({ event: "player-left", playerId: player.playerId });
-        console.log("Player disconnected");
-    });
 });
 
 console.log("WebSocket server is running on ws://localhost:8081");

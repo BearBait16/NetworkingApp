@@ -222,6 +222,7 @@ position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_kvmq5")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.547011
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 5

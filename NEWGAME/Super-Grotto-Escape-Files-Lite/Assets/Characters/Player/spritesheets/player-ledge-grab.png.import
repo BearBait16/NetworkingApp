@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brt82ciy51fws"
-path="res://.godot/imported/player-ledge-grab.png-a326c3aee64845be7bcb9e1c2eff2d67.ctex"
+path="res://.godot/imported/player-ledge-grab.png-ee47f29209eeef7d4f287ca13bcdcb83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-ledge-grab.png"
-dest_files=["res://.godot/imported/player-ledge-grab.png-a326c3aee64845be7bcb9e1c2eff2d67.ctex"]
+source_file="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-ledge-grab.png"
+dest_files=["res://.godot/imported/player-ledge-grab.png-ee47f29209eeef7d4f287ca13bcdcb83.ctex"]
 
 [params]
 

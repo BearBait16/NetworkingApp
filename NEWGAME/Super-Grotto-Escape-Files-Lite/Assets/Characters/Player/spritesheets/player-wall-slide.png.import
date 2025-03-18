@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qli7cviflfdl"
-path="res://.godot/imported/player-wall-slide.png-301707c13b9cd5397d3d42243845b621.ctex"
+path="res://.godot/imported/player-wall-slide.png-8391a67d1c78ea66018511822ac8db47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-wall-slide.png"
-dest_files=["res://.godot/imported/player-wall-slide.png-301707c13b9cd5397d3d42243845b621.ctex"]
+source_file="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-wall-slide.png"
+dest_files=["res://.godot/imported/player-wall-slide.png-8391a67d1c78ea66018511822ac8db47.ctex"]
 
 [params]
 
