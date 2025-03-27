@@ -12,7 +12,7 @@ var on_cooldown:bool = false
 
 func _ready() -> void:   #Chat suggestion
 	if multiplayer.is_server():
-		set_multiplayer_authority(multiplayer.get_unique_id())  # Server controls thi
+		set_multiplayer_authority(multiplayer.get_unique_id())  # Server controls this (Chat)
 	return
 
 func _physics_process(delta: float) -> void:

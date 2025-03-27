@@ -11,6 +11,7 @@ func _on_host_pressed() -> void:
 	
 func _add_player(id:int):
 	if id == 0: # Prevent adding an invalid player (ChatGPT suggestion)
+		print("Failed to add player")
 		return 
 		
 	var player = player_scene.instantiate()
@@ -18,5 +19,5 @@ func _add_player(id:int):
 	call_deferred("add_child", player)
 	
 func _on_join_pressed() -> void:
-	peer.create_client("localhost" ,135)
+	peer.create_client("10.244.199.226" ,135)
 	multiplayer.multiplayer_peer = peer
