@@ -1,1 +1,5 @@
 res://Scenes/Game.tscn
+res://Scenes/player.tscn
+res://Scenes/powerUp.tscn
+res://Scripts/multiplayer_configuration.gd
+res://Scripts/game.gd

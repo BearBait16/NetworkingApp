@@ -1,3 +1,4 @@
+#This is multiplayer_configuration.gd
 extends Node
 
 var peer = ENetMultiplayerPeer.new()

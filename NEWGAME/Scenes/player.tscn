@@ -1,12 +1,12 @@
 [gd_scene load_steps=69 format=3 uid="uid://cinn1rugfeywx"]
 
-[ext_resource type="Texture2D" uid="uid://bwopcthekcpp3" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-idle.png" id="1_2pykq"]
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_fwng4"]
-[ext_resource type="Texture2D" uid="uid://cysfsiphutuk0" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-run.png" id="2_ci8iu"]
-[ext_resource type="Texture2D" uid="uid://cjjy6mwbjbksg" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-jump.png" id="4_75qgu"]
-[ext_resource type="Texture2D" uid="uid://bt462om7hhlt2" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-spin.png" id="5_08oax"]
-[ext_resource type="Texture2D" uid="uid://bssknno65wq42" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/move.png" id="5_h81k8"]
-[ext_resource type="Texture2D" uid="uid://070yylxmtmy4" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/hide.png" id="6_v1kt8"]
+[ext_resource type="Texture2D" uid="uid://bwopcthekcpp3" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-idle.png" id="1_2pykq"]
+[ext_resource type="Script" uid="uid://btx8sve103hpd" path="res://Scripts/player.gd" id="1_fwng4"]
+[ext_resource type="Texture2D" uid="uid://cysfsiphutuk0" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-run.png" id="2_ci8iu"]
+[ext_resource type="Texture2D" uid="uid://cjjy6mwbjbksg" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-jump.png" id="4_75qgu"]
+[ext_resource type="Texture2D" uid="uid://bt462om7hhlt2" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-spin.png" id="5_08oax"]
+[ext_resource type="Texture2D" uid="uid://bssknno65wq42" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/move.png" id="5_h81k8"]
+[ext_resource type="Texture2D" uid="uid://070yylxmtmy4" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/hide.png" id="6_v1kt8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b3l6f"]
 atlas = ExtResource("5_08oax")

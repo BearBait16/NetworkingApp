@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b4gbhkgfmhh2a"]
 
-[ext_resource type="Script" path="res://Scripts/power_up.gd" id="1_g0781"]
-[ext_resource type="Texture2D" uid="uid://4pqxlkqt84o4" path="res://Assets/Super Grotto Escape Files/Assets/Fx/Spritesheets/pick-feedback-2.png" id="1_gutnw"]
+[ext_resource type="Script" uid="uid://d187vln2njxs3" path="res://Scripts/power_up.gd" id="1_g0781"]
+[ext_resource type="Texture2D" uid="uid://4pqxlkqt84o4" path="res://Super-Grotto-Escape-Files-Lite/Assets/Fx/Spritesheets/pick-feedback-2.png" id="1_gutnw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xnvyi"]
 atlas = ExtResource("1_gutnw")
