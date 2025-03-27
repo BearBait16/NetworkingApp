@@ -1,15 +1,19 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -350.0
-@onready var cooldown: Timer = $TagArea/Cooldown
 
 var isTagger = false
 var on_cooldown:bool = false
 
+@onready var cooldown: Timer = $TagArea/Cooldown
 @onready var hazmat: AnimatedSprite2D = $HazmatSprite
 @onready var snail: AnimatedSprite2D = $SnailSprite
+
+func _ready() -> void:   #Chat suggestion
+	if multiplayer.is_server():
+		set_multiplayer_authority(multiplayer.get_unique_id())  # Server controls thi
+	return
 
 func _physics_process(delta: float) -> void:
 	if is_multiplayer_authority():

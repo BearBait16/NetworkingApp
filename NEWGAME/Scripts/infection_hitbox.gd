@@ -4,8 +4,6 @@ extends Area2D
 
 @onready var cooldown: Timer = $Timer  #make sure not needed as physics interp.
 
-#Potentially look into signals?
-signal tagged
 var on_cooldown:bool = false
 
 #Start our cooldown so the player doesn't immedietly infect (sloppy solution?)
