@@ -8,7 +8,6 @@ var isTagger = false
 @onready var hazmat: AnimatedSprite2D = $Hazmat
 @onready var snail: AnimatedSprite2D = $Snail
 
-
 func _physics_process(delta: float) -> void:
 	if is_multiplayer_authority():
 		# Add the gravity.

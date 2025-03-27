@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
-res://Scenes/Game.tscn
-=======
 res://Scenes/powerUp.tscn
-res://Scripts/power_up.gd
-res://Scripts/infection_hitbox.gd
-res://Scenes/infection-hitbox.tscn
+res://Scripts/player.gd
 res://Scenes/Game.tscn
 res://Scenes/player.tscn
->>>>>>> Stashed changes
+res://Scenes/infection-hitbox.tscn
