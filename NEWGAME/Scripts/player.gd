@@ -5,8 +5,8 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -350.0
 
 var isTagger = false
-@onready var hazmat: AnimatedSprite2D = $Hazmat
-@onready var snail: AnimatedSprite2D = $Snail
+@onready var hazmat: AnimatedSprite2D = $HazmatSprite
+@onready var snail: AnimatedSprite2D = $SnailSprite
 
 func _physics_process(delta: float) -> void:
 	if is_multiplayer_authority():
@@ -22,9 +22,9 @@ func _physics_process(delta: float) -> void:
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var direction := Input.get_axis("move_left", "move_right")
 		
-		# determine sprite
+		# determine sprite (Possible to clean up?
 		var animated_sprite
-		if isTagger:
+		if isTagger:   #might move to _process?
 			animated_sprite = snail
 			hazmat.play("Vanish")
 		else:

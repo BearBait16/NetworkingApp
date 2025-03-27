@@ -55,6 +55,8 @@ radius = 6.0
 sprite_frames = SubResource("SpriteFrames_fpqx7")
 animation = &"Power-up"
 autoplay = "Power-up"
+frame = 1
+frame_progress = 0.203662
 
 [node name="InfectionHitBox" parent="." instance=ExtResource("2_tor4m")]
 
