@@ -1,1 +1,3 @@
 res://Scenes/Game.tscn
+res://Scripts/multiplayer_configuration.gd
+res://Scripts/game.gd
