@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://cinn1rugfeywx"]
+[gd_scene load_steps=70 format=3 uid="uid://cinn1rugfeywx"]
 
 [ext_resource type="Texture2D" uid="uid://bwopcthekcpp3" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-idle.png" id="1_2pykq"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_fwng4"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bt462om7hhlt2" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-spin.png" id="5_08oax"]
 [ext_resource type="Texture2D" uid="uid://bssknno65wq42" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/move.png" id="5_h81k8"]
 [ext_resource type="Texture2D" uid="uid://070yylxmtmy4" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/hide.png" id="6_v1kt8"]
-[ext_resource type="PackedScene" uid="uid://4l3fdcey40bp" path="res://Scenes/infection-hitbox.tscn" id="8_hjtbi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b3l6f"]
 atlas = ExtResource("5_08oax")
@@ -479,8 +478,8 @@ properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fhhff"]
-radius = 17.2627
+[sub_resource type="CircleShape2D" id="CircleShape2D_xecmw"]
+radius = 16.0312
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 3
@@ -513,9 +512,16 @@ horizontal_alignment = 1
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_s01yf")
 
-[node name="InfectionHitBox" parent="." instance=ExtResource("8_hjtbi")]
+[node name="TagArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
-[node name="Hitbox" type="CollisionShape2D" parent="InfectionHitBox"]
+[node name="Hitbox" type="CollisionShape2D" parent="TagArea"]
 position = Vector2(0, -14)
-shape = SubResource("CircleShape2D_fhhff")
-debug_color = Color(0.946587, 0.219486, 0.197517, 0.42)
+shape = SubResource("CircleShape2D_xecmw")
+debug_color = Color(0.855837, 0.120106, 0.231706, 0.42)
+
+[node name="Cooldown" type="Timer" parent="TagArea"]
+
+[connection signal="body_entered" from="TagArea" to="." method="_on_tag_area_body_entered"]
+[connection signal="timeout" from="TagArea/Cooldown" to="." method="_on_cooldown_timeout"]

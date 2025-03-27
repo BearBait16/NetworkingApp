@@ -3,7 +3,6 @@ extends Node
 var peer = ENetMultiplayerPeer.new()
 @export var player_scene: PackedScene
 
-
 func _on_host_pressed() -> void:
 	peer.create_server(135)
 	multiplayer.multiplayer_peer = peer
