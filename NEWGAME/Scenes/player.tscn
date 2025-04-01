@@ -482,6 +482,7 @@ properties/0/replication_mode = 1
 radius = 16.0312
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
 collision_layer = 3
 script = ExtResource("1_fwng4")
 
