@@ -1,0 +1,285 @@
+[gd_scene load_steps=4 format=3 uid="uid://biyyejk3jgomd"]
+
+[ext_resource type="Script" path="res://MainMenu/src/menu_controller.gd" id="1_7x6vp"]
+[ext_resource type="Texture2D" uid="uid://c7ycnhy7dx87w" path="res://MainMenu/res/00000.png" id="1_lg33l"]
+[ext_resource type="LabelSettings" uid="uid://1oyxx8ys1m6d" path="res://MainMenu/font.res" id="2_yfgsl"]
+
+[node name="main" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_7x6vp")
+
+[node name="Bg" type="TextureRect" parent="CanvasLayer/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lg33l")
+expand_mode = 1
+
+[node name="MainContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -50.0
+offset_right = 120.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start_button" type="Button" parent="CanvasLayer/MainMenu/MainContainer"]
+layout_mode = 2
+text = "START"
+
+[node name="Option_button" type="Button" parent="CanvasLayer/MainMenu/MainContainer"]
+layout_mode = 2
+text = "OPTION"
+
+[node name="Exit_button" type="Button" parent="CanvasLayer/MainMenu/MainContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "EXIT
+"
+
+[node name="OptionContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/MainMenu/OptionContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+tab_alignment = 1
+current_tab = 0
+
+[node name="Multiplayer" type="TabBar" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Host" type="Label" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 2.0
+offset_right = 95.0
+offset_bottom = 31.0
+text = "Host"
+label_settings = ExtResource("2_yfgsl")
+
+[node name="IP" type="Label" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 136.5
+offset_right = 102.0
+offset_bottom = 165.5
+text = "IP Address"
+label_settings = ExtResource("2_yfgsl")
+
+[node name="Port" type="Label" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 34.5
+offset_right = 156.0
+offset_bottom = 60.5
+text = "Port:"
+
+[node name="Host_Port_Spin" type="SpinBox" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 72.5
+offset_right = 210.0
+offset_bottom = 103.5
+max_value = 65535.0
+value = 135.0
+
+[node name="Join" type="Label" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 0.5
+offset_right = 293.0
+offset_bottom = 29.5
+text = "Join"
+label_settings = ExtResource("2_yfgsl")
+
+[node name="Port2" type="Label" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 32.5
+offset_right = 355.0
+offset_bottom = 58.5
+text = "Port:"
+
+[node name="Join_Port_Spin" type="SpinBox" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 67.5
+offset_right = 422.0
+offset_bottom = 98.5
+max_value = 65535.0
+value = 135.0
+
+[node name="Game Mode" type="Label" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 239.5
+offset_right = 295.0
+offset_bottom = 268.5
+text = "Game Mode"
+label_settings = ExtResource("2_yfgsl")
+
+[node name="GameMode_OptionButton" type="OptionButton" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 188.0
+offset_top = 283.5
+offset_right = 372.0
+offset_bottom = 314.5
+selected = 0
+item_count = 2
+popup/item_0/text = "Tag"
+popup/item_1/text = "Infection"
+popup/item_1/id = 1
+
+[node name="Speed" type="Label" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 235.5
+offset_right = 140.0
+offset_bottom = 264.5
+text = "Speed"
+label_settings = ExtResource("2_yfgsl")
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 283.5
+offset_right = 114.063
+offset_bottom = 314.5
+min_value = 0.5
+max_value = 3.0
+step = 0.5
+value = 1.0
+
+[node name="Host_Button" type="Button" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 376.5
+offset_right = 143.0
+offset_bottom = 407.5
+text = "Host"
+
+[node name="Join_Button" type="Button" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 375.5
+offset_right = 312.0
+offset_bottom = 406.5
+text = "Join"
+
+[node name="IpAddress" type="LineEdit" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 165.5
+offset_right = 103.063
+offset_bottom = 196.5
+placeholder_text = "xxx.xxx.xxx.xxx"
+expand_to_text_length = true
+
+[node name="Video" type="TabBar" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="General_Label" type="Label" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Video"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 14.5
+offset_right = 95.0
+offset_bottom = 43.5
+text = "General"
+label_settings = ExtResource("2_yfgsl")
+
+[node name="Resolution_Label" type="Label" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Video"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 42.0
+offset_right = 173.0
+offset_bottom = 68.0
+text = "Resolution :"
+
+[node name="Resolution_Optionbutton" type="OptionButton" parent="CanvasLayer/MainMenu/OptionContainer/TabContainer/Video"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 26.0
+offset_top = 72.5
+offset_right = 210.0
+offset_bottom = 103.5
+item_count = 6
+popup/item_0/text = "800x600"
+popup/item_1/text = "1024x768"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+popup/item_3/text = "1366x768"
+popup/item_3/id = 3
+popup/item_4/text = "1600x900"
+popup/item_4/id = 4
+popup/item_5/text = "1920x1080"
+popup/item_5/id = 5
+
+[node name="Container" type="HBoxContainer" parent="CanvasLayer/MainMenu/OptionContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Apply_button" type="Button" parent="CanvasLayer/MainMenu/OptionContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "Apply
+"
+
+[node name="Return_button" type="Button" parent="CanvasLayer/MainMenu/OptionContainer/Container"]
+layout_mode = 2
+text = "Return
+"
+
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainContainer/Start_button" to="CanvasLayer/MainMenu" method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainContainer/Option_button" to="CanvasLayer/MainMenu" method="_on_option_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainContainer/Exit_button" to="CanvasLayer/MainMenu" method="_on_exit_button_pressed"]
+[connection signal="item_selected" from="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer/GameMode_OptionButton" to="CanvasLayer/MainMenu" method="_on_game_mode_option_button_item_selected"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer/Host_Button" to="CanvasLayer/MainMenu" method="_on_host_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/OptionContainer/TabContainer/Multiplayer/Join_Button" to="CanvasLayer/MainMenu" method="_on_join_button_pressed"]
+[connection signal="item_selected" from="CanvasLayer/MainMenu/OptionContainer/TabContainer/Video/Resolution_Optionbutton" to="CanvasLayer/MainMenu" method="_on_resolution_optionbutton_item_selected"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/OptionContainer/Container/Apply_button" to="CanvasLayer/MainMenu" method="_on_apply_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/OptionContainer/Container/Return_button" to="CanvasLayer/MainMenu" method="_on_return_button_pressed"]

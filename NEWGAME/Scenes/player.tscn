@@ -1,12 +1,12 @@
-[gd_scene load_steps=69 format=3 uid="uid://cinn1rugfeywx"]
+[gd_scene load_steps=70 format=3 uid="uid://cinn1rugfeywx"]
 
-[ext_resource type="Texture2D" uid="uid://bwopcthekcpp3" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-idle.png" id="1_2pykq"]
+[ext_resource type="Texture2D" uid="uid://bwopcthekcpp3" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-idle.png" id="1_2pykq"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_fwng4"]
-[ext_resource type="Texture2D" uid="uid://cysfsiphutuk0" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-run.png" id="2_ci8iu"]
-[ext_resource type="Texture2D" uid="uid://cjjy6mwbjbksg" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-jump.png" id="4_75qgu"]
-[ext_resource type="Texture2D" uid="uid://bt462om7hhlt2" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Player/spritesheets/player-spin.png" id="5_08oax"]
-[ext_resource type="Texture2D" uid="uid://bssknno65wq42" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/move.png" id="5_h81k8"]
-[ext_resource type="Texture2D" uid="uid://070yylxmtmy4" path="res://Assets/Super Grotto Escape Files/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/hide.png" id="6_v1kt8"]
+[ext_resource type="Texture2D" uid="uid://cysfsiphutuk0" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-run.png" id="2_ci8iu"]
+[ext_resource type="Texture2D" uid="uid://cjjy6mwbjbksg" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-jump.png" id="4_75qgu"]
+[ext_resource type="Texture2D" uid="uid://bt462om7hhlt2" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Player/spritesheets/player-spin.png" id="5_08oax"]
+[ext_resource type="Texture2D" uid="uid://bssknno65wq42" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/move.png" id="5_h81k8"]
+[ext_resource type="Texture2D" uid="uid://070yylxmtmy4" path="res://Super-Grotto-Escape-Files-Lite/Assets/Characters/Enemies/Crystal Snail/SpriteSheets/hide.png" id="6_v1kt8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b3l6f"]
 atlas = ExtResource("5_08oax")
@@ -478,22 +478,26 @@ properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xecmw"]
+radius = 16.0312
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 3
 script = ExtResource("1_fwng4")
 
-[node name="Hazmat" type="AnimatedSprite2D" parent="."]
+[node name="HazmatSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -19)
 sprite_frames = SubResource("SpriteFrames_sgcns")
-animation = &"Down"
+animation = &"Idle"
 autoplay = "Idle"
 
-[node name="Snail" type="AnimatedSprite2D" parent="."]
+[node name="SnailSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -30)
 sprite_frames = SubResource("SpriteFrames_osmdx")
 animation = &"Down"
 autoplay = "Idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="PhysicsHitBox" type="CollisionShape2D" parent="."]
 position = Vector2(0, -14)
 shape = SubResource("CapsuleShape2D_hlcay")
 
@@ -507,3 +511,17 @@ horizontal_alignment = 1
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_s01yf")
+
+[node name="TagArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Hitbox" type="CollisionShape2D" parent="TagArea"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_xecmw")
+debug_color = Color(0.855837, 0.120106, 0.231706, 0.42)
+
+[node name="Cooldown" type="Timer" parent="TagArea"]
+
+[connection signal="body_entered" from="TagArea" to="." method="_on_tag_area_body_entered"]
+[connection signal="timeout" from="TagArea/Cooldown" to="." method="_on_cooldown_timeout"]

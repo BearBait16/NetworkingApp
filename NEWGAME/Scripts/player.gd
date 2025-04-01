@@ -1,13 +1,19 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -350.0
 
 var isTagger = false
-@onready var hazmat: AnimatedSprite2D = $Hazmat
-@onready var snail: AnimatedSprite2D = $Snail
+var on_cooldown:bool = false
 
+@onready var cooldown: Timer = $TagArea/Cooldown
+@onready var hazmat: AnimatedSprite2D = $HazmatSprite
+@onready var snail: AnimatedSprite2D = $SnailSprite
+
+func _ready() -> void:   #Chat suggestion
+	if multiplayer.is_server():
+		set_multiplayer_authority(multiplayer.get_unique_id())  # Server controls this (Chat)
+	return
 
 func _physics_process(delta: float) -> void:
 	if is_multiplayer_authority():
@@ -23,9 +29,9 @@ func _physics_process(delta: float) -> void:
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var direction := Input.get_axis("move_left", "move_right")
 		
-		# determine sprite
+		# determine sprite (Possible to clean up?
 		var animated_sprite
-		if isTagger:
+		if isTagger:   #might move to _process?
 			animated_sprite = snail
 			hazmat.play("Vanish")
 		else:
@@ -65,3 +71,22 @@ func _physics_process(delta: float) -> void:
 
 func _enter_tree():
 	set_multiplayer_authority(name.to_int())
+
+#Tag function
+func _on_tag_area_body_entered(body: Node2D) -> void:
+	if not body.isTagger && isTagger:  #Check to see if we are tagging player
+		body.isTagger = true    #maybe move to function to simplify
+		body.cooldown.start()
+		cooldown.start()
+		body.on_cooldown = true
+		on_cooldown = true
+		  
+	elif body.isTagger && not isTagger: #Check to see if we are getting tagged
+		isTagger = true
+		body.cooldown.start()
+		cooldown.start()
+		body.on_cooldown = true
+		on_cooldown = true
+
+func _on_cooldown_timeout() -> void:
+	on_cooldown = false

@@ -11,15 +11,18 @@ config_version=5
 [application]
 
 config/name="A Game of Tag"
-run/main_scene="res://Scenes/Game.tscn"
+run/main_scene="res://MainMenu/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalSettings="*res://Scripts/global_settings.gd"
+
 [display]
 
-window/size/viewport_width=2304
-window/size/viewport_height=1296
-window/stretch/scale=2.0
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [dotnet]
 

@@ -1,3 +1,10 @@
+res://MainMenu/main.tscn
+res://MainMenu/src/menu_controller.gd
+res://MainMenu/README.md
 res://Scenes/Game.tscn
-res://Scripts/multiplayer_configuration.gd
+res://MainMenu/settings.cfg
 res://Scripts/game.gd
+res://Scripts/multiplayer_configuration.gd
+res://Scripts/player.gd
+res://settings.cfg
+res://Scripts/global_settings.gd

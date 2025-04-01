@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b4gbhkgfmhh2a"]
 
-[ext_resource type="Script" path="res://Scripts/power_up.gd" id="1_g0781"]
-[ext_resource type="Texture2D" uid="uid://4pqxlkqt84o4" path="res://Assets/Super Grotto Escape Files/Assets/Fx/Spritesheets/pick-feedback-2.png" id="1_gutnw"]
+[ext_resource type="Texture2D" uid="uid://4pqxlkqt84o4" path="res://Super-Grotto-Escape-Files-Lite/Assets/Fx/Spritesheets/pick-feedback-2.png" id="1_gutnw"]
+[ext_resource type="PackedScene" uid="uid://4l3fdcey40bp" path="res://Scenes/infection-hitbox.tscn" id="2_tor4m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xnvyi"]
 atlas = ExtResource("1_gutnw")
@@ -46,18 +46,20 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hr3ml"]
-radius = 8.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_jmt71"]
+radius = 6.0
 
-[node name="PowerUp" type="Area2D"]
-script = ExtResource("1_g0781")
+[node name="PowerUp" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fpqx7")
 animation = &"Power-up"
 autoplay = "Power-up"
+frame = 1
+frame_progress = 0.203662
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_hr3ml")
+[node name="InfectionHitBox" parent="." instance=ExtResource("2_tor4m")]
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InfectionHitBox"]
+shape = SubResource("CircleShape2D_jmt71")
+debug_color = Color(0.83868, 0.236761, 0.223687, 0.42)
