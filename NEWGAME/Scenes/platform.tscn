@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtuhr0myi3506"]
+
+[ext_resource type="Texture2D" uid="uid://dvqf83b17li86" path="res://Super-Grotto-Escape-Files-Lite/Assets/Environment/Layers/tileset-2.png" id="1_j2k6s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa04b"]
+size = Vector2(48, 16)
+
+[node name="Platform" type="AnimatableBody2D"]
+position = Vector2(-16, 0)
+
+[node name="Block01" type="Sprite2D" parent="."]
+texture = ExtResource("1_j2k6s")
+region_enabled = true
+region_rect = Rect2(64, 96, 16, 16)
+
+[node name="Block02" type="Sprite2D" parent="."]
+position = Vector2(16, 0)
+texture = ExtResource("1_j2k6s")
+region_enabled = true
+region_rect = Rect2(64, 96, 16, 16)
+
+[node name="Block03" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+texture = ExtResource("1_j2k6s")
+region_enabled = true
+region_rect = Rect2(64, 96, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_aa04b")
+one_way_collision = true
